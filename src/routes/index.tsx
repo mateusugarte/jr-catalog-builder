@@ -37,17 +37,24 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="relative">
-      <ScrollProgress />
-      <Header />
-      <Hero />
-      <Sobre />
-      <Servicos />
-      <Segmentos />
-      <Cases />
-      <Galeria />
-      <Clientes />
-      <Diferenciais />
-      <Footer />
+      <div
+        className="bg-logo-watermark"
+        style={{ backgroundImage: `url(${jrLogo})` }}
+        aria-hidden
+      />
+      <div className="relative z-[2]">
+        <ScrollProgress />
+        <Header />
+        <Hero />
+        <Sobre />
+        <Servicos />
+        <Segmentos />
+        <Cases />
+        <Galeria />
+        <Clientes />
+        <Diferenciais />
+        <Footer />
+      </div>
     </div>
   );
 }
