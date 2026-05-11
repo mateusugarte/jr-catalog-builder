@@ -11,7 +11,7 @@
 import handler from "../dist/server/index.js";
 
 export const config = {
-  runtime: "edge",
+  runtime: "nodejs20.x",
 };
 
 export default function fetch(request: Request, ctx: unknown) {
