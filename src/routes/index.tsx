@@ -22,7 +22,7 @@ import {
   Store,
   Croissant,
   UtensilsCrossed,
-  Factory,
+  
   Zap,
   Wrench,
   Map as MapIcon,
@@ -37,17 +37,24 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="relative">
-      <ScrollProgress />
-      <Header />
-      <Hero />
-      <Sobre />
-      <Servicos />
-      <Segmentos />
-      <Cases />
-      <Galeria />
-      <Clientes />
-      <Diferenciais />
-      <Footer />
+      <div
+        className="bg-logo-watermark"
+        style={{ backgroundImage: `url(${jrLogo})` }}
+        aria-hidden
+      />
+      <div className="relative z-[2]">
+        <ScrollProgress />
+        <Header />
+        <Hero />
+        <Sobre />
+        <Servicos />
+        <Segmentos />
+        <Cases />
+        <Galeria />
+        <Clientes />
+        <Diferenciais />
+        <Footer />
+      </div>
     </div>
   );
 }
@@ -61,7 +68,7 @@ function Header() {
           <img
             src={jrLogo}
             alt="JR Balanças e Máquinas"
-            className="w-10 h-10 md:w-12 md:h-12 object-cover rounded-sm border border-jr-red/40"
+            className="w-11 h-11 md:w-12 md:h-12 object-cover rounded-full border-2 border-jr-red/60 shadow-[0_0_18px_oklch(0.535_0.215_25/0.35)]"
           />
           <div className="leading-tight">
             <div className="font-display font-black uppercase text-jr-white text-base md:text-lg tracking-wide">
@@ -94,7 +101,7 @@ function Hero() {
             <img
               src={jrLogo}
               alt="JR Balanças e Máquinas"
-              className="w-16 h-16 md:w-20 md:h-20 object-cover rounded-sm border-2 border-jr-red"
+              className="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full border-2 border-jr-red shadow-[0_0_30px_oklch(0.535_0.215_25/0.45)]"
             />
             <div>
               <div className="font-display font-black uppercase text-jr-white text-2xl md:text-4xl leading-none">
@@ -261,40 +268,38 @@ const segmentos = [
   { name: "Supermercados", Icon: Store },
   { name: "Padarias", Icon: Croissant },
   { name: "Restaurantes", Icon: UtensilsCrossed },
-  { name: "Indústrias", Icon: Factory },
 ];
 
 function Segmentos() {
+  const loop = [...segmentos, ...segmentos];
   return (
-    <section className="bg-jr-black-medium py-24 md:py-32 px-6 md:px-12 lg:px-20">
+    <section className="bg-jr-black-medium py-24 md:py-32 px-6 md:px-12 lg:px-20 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <Reveal><span className="section-label">▸ Quem atendemos</span></Reveal>
         <Reveal delay={100}>
           <h2 className="text-jr-white font-display uppercase mt-6 text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
-            Do açougue à indústria
+            Do açougue ao restaurante
           </h2>
         </Reveal>
+      </div>
 
-        <div className="mt-14 -mx-6 md:mx-0 overflow-x-auto">
-          <div className="flex items-stretch min-w-max md:min-w-0 md:justify-between gap-0 px-6 md:px-0">
-            {segmentos.map((s, i) => (
-              <div key={s.name} className="flex items-center">
-                <Reveal delay={i * 70}>
-                  <div className="flex flex-col items-center text-center px-8 py-4 min-w-[140px]">
-                    <s.Icon className="w-12 h-12 text-jr-white" strokeWidth={1.3} />
-                    <span className="mt-4 font-barlow font-medium text-sm uppercase tracking-wider text-jr-gray">
-                      {s.name}
-                    </span>
-                  </div>
-                </Reveal>
-                {i < segmentos.length - 1 && (
-                  <div className="hidden md:block w-px h-16 bg-jr-gray-dark" />
-                )}
+      <div className="mt-14 marquee-mask overflow-hidden">
+        <div className="flex w-max animate-marquee">
+          {loop.map((s, i) => (
+            <div key={i} className="flex items-center">
+              <div className="flex flex-col items-center text-center px-10 py-4 min-w-[160px]">
+                <s.Icon className="w-12 h-12 text-jr-white" strokeWidth={1.3} />
+                <span className="mt-4 font-barlow font-medium text-sm uppercase tracking-wider text-jr-gray whitespace-nowrap">
+                  {s.name}
+                </span>
               </div>
-            ))}
-          </div>
+              <div className="w-px h-16 bg-jr-gray-dark" />
+            </div>
+          ))}
         </div>
+      </div>
 
+      <div className="max-w-7xl mx-auto">
         <p className="mt-12 text-center font-mono-tech text-xs text-jr-gray-dark tracking-wider">
           Se sua operação depende de um equipamento, a JR pode atender.
         </p>
@@ -308,7 +313,7 @@ const SUPABASE_BASE = "https://jlzckqjggdzpzqiuvgcv.supabase.co/storage/v1/objec
 
 const reparos = [
   {
-    antes: `${SUPABASE_BASE}/WhatsApp%20Image%202026-05-11%20at%2010.52.53.jpeg`,
+    antes: `${SUPABASE_BASE}/antes%201.jpeg`,
     depois: `${SUPABASE_BASE}/depois%201.jpeg`,
   },
   {
@@ -440,9 +445,10 @@ const clientes = [
 ];
 
 function Clientes() {
+  const loop = [...clientes, ...clientes];
   return (
-    <section className="py-24 md:py-32 px-6 md:px-12 lg:px-20">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-24 md:py-32 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         <Reveal><span className="section-label">▸ Clientes</span></Reveal>
         <Reveal delay={100}>
           <h2 className="text-jr-white font-display uppercase mt-6 text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
@@ -454,19 +460,22 @@ function Clientes() {
             Algumas das empresas que já contaram com nosso atendimento.
           </p>
         </Reveal>
+      </div>
 
-        <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-5">
-          {clientes.map((src, i) => (
-            <Reveal key={i} delay={i * 80}>
-              <div className="relative aspect-square bg-jr-black-soft border border-jr-red/20 overflow-hidden group">
-                <img
-                  src={src}
-                  alt={`Empresa atendida ${i + 1}`}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-            </Reveal>
+      <div className="mt-14 marquee-mask overflow-hidden">
+        <div className="flex w-max animate-marquee gap-5 pr-5">
+          {loop.map((src, i) => (
+            <div
+              key={i}
+              className="relative w-[260px] md:w-[320px] aspect-square shrink-0 bg-jr-black-soft border border-jr-red/20 overflow-hidden"
+            >
+              <img
+                src={src}
+                alt={`Empresa atendida ${(i % clientes.length) + 1}`}
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
           ))}
         </div>
       </div>
@@ -525,7 +534,7 @@ function Footer() {
           <img
             src={jrLogo}
             alt="JR Balanças e Máquinas"
-            className="w-14 h-14 object-cover rounded-sm border border-jr-red/40"
+            className="w-16 h-16 object-cover rounded-full border-2 border-jr-red/50 shadow-[0_0_20px_oklch(0.535_0.215_25/0.35)]"
           />
           <div>
             <h2 className="font-display font-extrabold uppercase text-jr-white text-3xl md:text-[32px] tracking-wide leading-none">
