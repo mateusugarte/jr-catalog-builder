@@ -4,12 +4,11 @@ export function Reveal({
   children,
   delay = 0,
   className = "",
-  as: Tag = "div",
+  className = "",
 }: {
   children: ReactNode;
   delay?: number;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [shown, setShown] = useState(false);
@@ -30,10 +29,9 @@ export function Reveal({
     io.observe(el);
     return () => io.disconnect();
   }, [delay]);
-  const Comp = Tag as any;
   return (
-    <Comp ref={ref} className={`reveal ${shown ? "in" : ""} ${className}`}>
+    <div ref={ref} className={`reveal ${shown ? "in" : ""} ${className}`}>
       {children}
-    </Comp>
+    </div>
   );
 }
