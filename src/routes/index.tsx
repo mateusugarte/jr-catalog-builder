@@ -9,7 +9,6 @@ import {
   MapPin,
   MessageCircle,
   ArrowRight,
-  ArrowDown,
   Slice,
   Package,
   Wind,
@@ -261,7 +260,7 @@ function Servicos() {
       <div className="max-w-7xl mx-auto">
         <Reveal><span className="section-label">▸ Serviços</span></Reveal>
         <Reveal delay={100}>
-          <h2 className="text-jr-white font-display uppercase mt-6 text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
+          <h2 className="text-jr-white font-display uppercase mt-5 md:mt-6 text-[34px] sm:text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
             Máquinas que dominamos
           </h2>
         </Reveal>
@@ -315,7 +314,7 @@ function Segmentos() {
       <div className="max-w-7xl mx-auto">
         <Reveal><span className="section-label">▸ Quem atendemos</span></Reveal>
         <Reveal delay={100}>
-          <h2 className="text-jr-white font-display uppercase mt-6 text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
+          <h2 className="text-jr-white font-display uppercase mt-5 md:mt-6 text-[34px] sm:text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
             Do açougue ao restaurante
           </h2>
         </Reveal>
@@ -443,7 +442,7 @@ function Galeria() {
       <div className="max-w-7xl mx-auto">
         <Reveal><span className="section-label">▸ Máquinas reparadas</span></Reveal>
         <Reveal delay={100}>
-          <h2 className="text-jr-white font-display uppercase mt-6 text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
+          <h2 className="text-jr-white font-display uppercase mt-5 md:mt-6 text-[34px] sm:text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
             Prontas para operar
           </h2>
         </Reveal>
@@ -488,7 +487,7 @@ function Clientes() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         <Reveal><span className="section-label">▸ Clientes</span></Reveal>
         <Reveal delay={100}>
-          <h2 className="text-jr-white font-display uppercase mt-6 text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
+          <h2 className="text-jr-white font-display uppercase mt-5 md:mt-6 text-[34px] sm:text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
             Empresas que confiam na JR
           </h2>
         </Reveal>
@@ -535,7 +534,7 @@ function Diferenciais() {
     <section className="bg-jr-red py-16 md:py-32 px-5 md:px-12 lg:px-20">
       <div className="max-w-6xl mx-auto">
         <Reveal>
-          <h2 className="text-jr-black font-display font-black uppercase text-center text-5xl md:text-6xl lg:text-[64px] leading-[0.95]">
+          <h2 className="text-jr-black font-display font-black uppercase text-center text-[40px] sm:text-5xl md:text-6xl lg:text-[64px] leading-[0.95]">
             Por que a JR?
           </h2>
         </Reveal>
