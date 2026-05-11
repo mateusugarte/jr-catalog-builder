@@ -160,22 +160,15 @@ function Hero() {
         </Reveal>
 
         <Reveal delay={360}>
-          <div className="mt-7 md:mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <div className="mt-7 md:mt-9">
             <a
               href="https://wa.me/5511994803895"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-jr-red text-jr-white font-mono-tech text-xs tracking-[0.18em] uppercase px-5 py-3.5 hover:bg-jr-red-vivid transition-colors active:scale-[0.98]"
+              className="inline-flex items-center justify-center gap-2 bg-jr-red text-jr-white font-mono-tech text-xs tracking-[0.18em] uppercase px-6 py-4 hover:bg-jr-red-vivid transition-colors active:scale-[0.98] shadow-[0_8px_30px_oklch(0.535_0.215_25/0.4)]"
             >
               <MessageCircle className="w-4 h-4" />
               Falar no WhatsApp
-            </a>
-            <a
-              href="tel:+5511994803895"
-              className="inline-flex items-center justify-center gap-2 border border-jr-red/60 text-jr-white font-mono-tech text-xs tracking-[0.18em] uppercase px-5 py-3.5 hover:border-jr-red transition-colors active:scale-[0.98]"
-            >
-              <Phone className="w-4 h-4 text-jr-red" />
-              (11) 99480-3895
             </a>
           </div>
         </Reveal>
