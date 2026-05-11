@@ -389,31 +389,30 @@ function Cases() {
       <div className="max-w-7xl mx-auto">
         <Reveal><span className="section-label">▸ Nossos cases</span></Reveal>
         <Reveal delay={100}>
-          <h2 className="text-jr-white font-display uppercase mt-6 text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
+          <h2 className="text-jr-white font-display uppercase mt-5 md:mt-6 text-[34px] sm:text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
             O antes e o depois
           </h2>
         </Reveal>
         <Reveal delay={180}>
-          <p className="mt-6 text-jr-gray text-lg max-w-2xl">
+          <p className="mt-5 md:mt-6 text-jr-gray text-[15px] md:text-lg max-w-2xl">
             Equipamentos realmente restaurados. Resultados reais.
           </p>
         </Reveal>
 
-        <div className="mt-16 grid lg:grid-cols-2 gap-8">
+        <div className="mt-10 md:mt-16 grid lg:grid-cols-2 gap-6 md:gap-8">
           {reparos.map((r, i) => (
             <Reveal key={i} delay={(i % 2) * 100}>
-              <div className="jr-card p-6 md:p-8 rounded-sm">
-                <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-3 items-center">
+              <div className="jr-card p-4 sm:p-6 md:p-8 rounded-sm">
+                <div className="grid grid-cols-2 md:grid-cols-[1fr_auto_1fr] gap-3 md:gap-3 items-center">
                   <CaseImage src={r.antes} label="ANTES" />
-                  <div className="flex md:flex-col items-center justify-center text-jr-red">
-                    <ArrowRight className="hidden md:block w-7 h-7" />
-                    <ArrowDown className="md:hidden w-7 h-7" />
+                  <div className="hidden md:flex flex-col items-center justify-center text-jr-red">
+                    <ArrowRight className="w-7 h-7" />
                   </div>
                   <CaseImage src={r.depois} label="DEPOIS" />
                 </div>
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="h-[2px] w-10 bg-jr-red" />
-                  <h3 className="font-display uppercase text-jr-white text-2xl tracking-wide">
+                <div className="mt-5 md:mt-6 flex items-center gap-3">
+                  <div className="h-[2px] w-8 md:w-10 bg-jr-red" />
+                  <h3 className="font-display uppercase text-jr-white text-xl md:text-2xl tracking-wide">
                     Antes × Depois
                   </h3>
                 </div>
