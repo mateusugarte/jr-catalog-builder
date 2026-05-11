@@ -68,7 +68,7 @@ function Header() {
           <img
             src={jrLogo}
             alt="JR Balanças e Máquinas"
-            className="w-10 h-10 md:w-12 md:h-12 object-cover rounded-sm border border-jr-red/40"
+            className="w-11 h-11 md:w-12 md:h-12 object-cover rounded-full border-2 border-jr-red/60 shadow-[0_0_18px_oklch(0.535_0.215_25/0.35)]"
           />
           <div className="leading-tight">
             <div className="font-display font-black uppercase text-jr-white text-base md:text-lg tracking-wide">
