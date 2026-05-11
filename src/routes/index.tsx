@@ -268,40 +268,38 @@ const segmentos = [
   { name: "Supermercados", Icon: Store },
   { name: "Padarias", Icon: Croissant },
   { name: "Restaurantes", Icon: UtensilsCrossed },
-  { name: "Indústrias", Icon: Factory },
 ];
 
 function Segmentos() {
+  const loop = [...segmentos, ...segmentos];
   return (
-    <section className="bg-jr-black-medium py-24 md:py-32 px-6 md:px-12 lg:px-20">
+    <section className="bg-jr-black-medium py-24 md:py-32 px-6 md:px-12 lg:px-20 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <Reveal><span className="section-label">▸ Quem atendemos</span></Reveal>
         <Reveal delay={100}>
           <h2 className="text-jr-white font-display uppercase mt-6 text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
-            Do açougue à indústria
+            Do açougue ao restaurante
           </h2>
         </Reveal>
+      </div>
 
-        <div className="mt-14 -mx-6 md:mx-0 overflow-x-auto">
-          <div className="flex items-stretch min-w-max md:min-w-0 md:justify-between gap-0 px-6 md:px-0">
-            {segmentos.map((s, i) => (
-              <div key={s.name} className="flex items-center">
-                <Reveal delay={i * 70}>
-                  <div className="flex flex-col items-center text-center px-8 py-4 min-w-[140px]">
-                    <s.Icon className="w-12 h-12 text-jr-white" strokeWidth={1.3} />
-                    <span className="mt-4 font-barlow font-medium text-sm uppercase tracking-wider text-jr-gray">
-                      {s.name}
-                    </span>
-                  </div>
-                </Reveal>
-                {i < segmentos.length - 1 && (
-                  <div className="hidden md:block w-px h-16 bg-jr-gray-dark" />
-                )}
+      <div className="mt-14 marquee-mask overflow-hidden">
+        <div className="flex w-max animate-marquee">
+          {loop.map((s, i) => (
+            <div key={i} className="flex items-center">
+              <div className="flex flex-col items-center text-center px-10 py-4 min-w-[160px]">
+                <s.Icon className="w-12 h-12 text-jr-white" strokeWidth={1.3} />
+                <span className="mt-4 font-barlow font-medium text-sm uppercase tracking-wider text-jr-gray whitespace-nowrap">
+                  {s.name}
+                </span>
               </div>
-            ))}
-          </div>
+              <div className="w-px h-16 bg-jr-gray-dark" />
+            </div>
+          ))}
         </div>
+      </div>
 
+      <div className="max-w-7xl mx-auto">
         <p className="mt-12 text-center font-mono-tech text-xs text-jr-gray-dark tracking-wider">
           Se sua operação depende de um equipamento, a JR pode atender.
         </p>
