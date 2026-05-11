@@ -532,7 +532,7 @@ function Footer() {
           <img
             src={jrLogo}
             alt="JR Balanças e Máquinas"
-            className="w-14 h-14 object-cover rounded-sm border border-jr-red/40"
+            className="w-16 h-16 object-cover rounded-full border-2 border-jr-red/50 shadow-[0_0_20px_oklch(0.535_0.215_25/0.35)]"
           />
           <div>
             <h2 className="font-display font-extrabold uppercase text-jr-white text-3xl md:text-[32px] tracking-wide leading-none">
