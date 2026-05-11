@@ -73,19 +73,23 @@ function Header() {
           </div>
         </div>
         <a
-          href="tel:+5511994803895"
-          aria-label="Ligar para JR"
-          className="hidden sm:inline-flex items-center gap-2 font-mono-tech text-xs tracking-wider uppercase text-jr-white border border-jr-red/40 hover:border-jr-red px-3 py-2 transition-colors"
+          href="https://wa.me/5511994803895"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Falar no WhatsApp"
+          className="hidden sm:inline-flex items-center gap-2 font-mono-tech text-xs tracking-wider uppercase text-jr-white bg-jr-red hover:bg-jr-red-vivid px-4 py-2.5 transition-colors"
         >
-          <Phone className="w-3.5 h-3.5 text-jr-red" />
-          (11) 99480-3895
+          <MessageCircle className="w-4 h-4" />
+          WhatsApp
         </a>
         <a
-          href="tel:+5511994803895"
-          aria-label="Ligar para JR"
-          className="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-jr-red/50 bg-jr-red/10 text-jr-white shrink-0 active:scale-95 transition"
+          href="https://wa.me/5511994803895"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Falar no WhatsApp"
+          className="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-full bg-jr-red text-jr-white shrink-0 active:scale-95 transition"
         >
-          <Phone className="w-4 h-4 text-jr-red" />
+          <MessageCircle className="w-4 h-4" />
         </a>
       </div>
     </header>
@@ -156,22 +160,15 @@ function Hero() {
         </Reveal>
 
         <Reveal delay={360}>
-          <div className="mt-7 md:mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <div className="mt-7 md:mt-9">
             <a
               href="https://wa.me/5511994803895"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-jr-red text-jr-white font-mono-tech text-xs tracking-[0.18em] uppercase px-5 py-3.5 hover:bg-jr-red-vivid transition-colors active:scale-[0.98]"
+              className="inline-flex items-center justify-center gap-2 bg-jr-red text-jr-white font-mono-tech text-xs tracking-[0.18em] uppercase px-6 py-4 hover:bg-jr-red-vivid transition-colors active:scale-[0.98] shadow-[0_8px_30px_oklch(0.535_0.215_25/0.4)]"
             >
               <MessageCircle className="w-4 h-4" />
               Falar no WhatsApp
-            </a>
-            <a
-              href="tel:+5511994803895"
-              className="inline-flex items-center justify-center gap-2 border border-jr-red/60 text-jr-white font-mono-tech text-xs tracking-[0.18em] uppercase px-5 py-3.5 hover:border-jr-red transition-colors active:scale-[0.98]"
-            >
-              <Phone className="w-4 h-4 text-jr-red" />
-              (11) 99480-3895
             </a>
           </div>
         </Reveal>
