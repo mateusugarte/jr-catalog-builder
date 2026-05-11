@@ -101,7 +101,7 @@ function Hero() {
             <img
               src={jrLogo}
               alt="JR Balanças e Máquinas"
-              className="w-16 h-16 md:w-20 md:h-20 object-cover rounded-sm border-2 border-jr-red"
+              className="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full border-2 border-jr-red shadow-[0_0_30px_oklch(0.535_0.215_25/0.45)]"
             />
             <div>
               <div className="font-display font-black uppercase text-jr-white text-2xl md:text-4xl leading-none">
