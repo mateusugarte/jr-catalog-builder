@@ -22,7 +22,7 @@ import {
   Store,
   Croissant,
   UtensilsCrossed,
-  Factory,
+  
   Zap,
   Wrench,
   Map as MapIcon,
