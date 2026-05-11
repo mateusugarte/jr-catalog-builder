@@ -137,7 +137,7 @@ function Hero() {
 
         <Reveal delay={120}>
           <span className="inline-flex items-center gap-2 border border-jr-red/60 px-3 py-1.5 text-jr-white font-mono-tech text-[10px] sm:text-[11px] tracking-[0.18em] uppercase">
-            <span className="text-jr-red">▸</span> Atendimento In Loco
+            <span className="text-jr-red">▸</span> Atendimento No Local
           </span>
         </Reveal>
 
@@ -220,7 +220,7 @@ function Sobre() {
           {[
             { value: <><Counter to={15} />+</>, label: "Anos de mercado" },
             { value: "GRSP", lgValue: "Grande SP", label: "Área de atuação" },
-            { value: "In Loco", label: "Atendimento" },
+            { value: "No Local", label: "Atendimento" },
           ].map((s: any, i) => (
             <Reveal key={i} delay={i * 120}>
               <div className="bg-jr-black-soft border border-jr-red/25 p-4 sm:p-6 lg:p-8 rounded-sm h-full">
@@ -518,7 +518,7 @@ function Clientes() {
 
 /* ============== DIFERENCIAIS ============== */
 const diferenciais = [
-  { title: "Atendimento in loco", desc: "Vamos até onde a máquina está. Sem necessidade de transporte ou desmontagem.", Icon: MapPin },
+  { title: "Atendimento no local", desc: "Vamos até onde a máquina está. Sem necessidade de transporte ou desmontagem.", Icon: MapPin },
   { title: "Rapidez no diagnóstico", desc: "Equipe treinada para diagnóstico rápido, com mínimo tempo de máquina parada.", Icon: Zap },
   { title: "15 anos de especialização", desc: "Conhecimento acumulado em décadas de serviço no segmento industrial.", Icon: Wrench },
   { title: "Grande São Paulo", desc: "Cobertura completa da Grande SP. Interior sob acordo.", Icon: MapIcon },
@@ -607,7 +607,7 @@ function Footer() {
               <Wrench className="w-4 h-4 text-jr-red" />
               <span className="uppercase tracking-[0.18em] text-[11px] text-jr-gray-dark">Atendimento</span>
             </div>
-            <p className="mt-3 text-jr-white text-base">In loco</p>
+            <p className="mt-3 text-jr-white text-base">No local</p>
             <p className="mt-1 text-jr-gray text-xs">Onde sua máquina está</p>
           </div>
         </div>
