@@ -192,7 +192,7 @@ function Hero() {
 /* ============== SOBRE ============== */
 function Sobre() {
   return (
-    <section className="relative bg-jr-black-medium py-24 md:py-32 px-6 md:px-12 lg:px-20">
+    <section className="relative bg-jr-black-medium py-16 md:py-32 px-5 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
         <div>
           <Reveal>
@@ -258,7 +258,7 @@ const servicos = [
 
 function Servicos() {
   return (
-    <section className="relative py-24 md:py-32 px-6 md:px-12 lg:px-20">
+    <section className="relative py-16 md:py-32 px-5 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <Reveal><span className="section-label">▸ Serviços</span></Reveal>
         <Reveal delay={100}>
@@ -285,7 +285,7 @@ function Servicos() {
 
       {/* Especialidades faixa */}
       <Reveal>
-        <div className="mt-20 -mx-6 md:-mx-12 lg:-mx-20 bg-jr-red px-6 md:px-12 lg:px-20 py-14 text-center">
+        <div className="mt-20 -mx-5 md:-mx-12 lg:-mx-20 bg-jr-red px-5 md:px-12 lg:px-20 py-12 md:py-14 text-center">
           <h3 className="font-display font-extrabold uppercase text-jr-black text-3xl md:text-4xl lg:text-[40px] leading-tight">
             Especialistas em máquinas de frios e máquinas a vácuo
           </h3>
@@ -312,7 +312,7 @@ const segmentos = [
 function Segmentos() {
   const loop = [...segmentos, ...segmentos];
   return (
-    <section className="bg-jr-black-medium py-24 md:py-32 px-6 md:px-12 lg:px-20 overflow-hidden">
+    <section className="bg-jr-black-medium py-16 md:py-32 px-5 md:px-12 lg:px-20 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <Reveal><span className="section-label">▸ Quem atendemos</span></Reveal>
         <Reveal delay={100}>
@@ -386,7 +386,7 @@ function CaseImage({ src, label }: { src: string; label: "ANTES" | "DEPOIS" }) {
 
 function Cases() {
   return (
-    <section className="py-24 md:py-32 px-6 md:px-12 lg:px-20">
+    <section className="py-16 md:py-32 px-5 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <Reveal><span className="section-label">▸ Nossos cases</span></Reveal>
         <Reveal delay={100}>
@@ -441,7 +441,7 @@ const maquinasPronas = [
 
 function Galeria() {
   return (
-    <section className="bg-jr-black-medium py-24 md:py-32 px-6 md:px-12 lg:px-20">
+    <section className="bg-jr-black-medium py-16 md:py-32 px-5 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <Reveal><span className="section-label">▸ Máquinas reparadas</span></Reveal>
         <Reveal delay={100}>
@@ -534,7 +534,7 @@ const diferenciais = [
 
 function Diferenciais() {
   return (
-    <section className="bg-jr-red py-24 md:py-32 px-6 md:px-12 lg:px-20">
+    <section className="bg-jr-red py-16 md:py-32 px-5 md:px-12 lg:px-20">
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <h2 className="text-jr-black font-display font-black uppercase text-center text-5xl md:text-6xl lg:text-[64px] leading-[0.95]">
