@@ -445,9 +445,10 @@ const clientes = [
 ];
 
 function Clientes() {
+  const loop = [...clientes, ...clientes];
   return (
-    <section className="py-24 md:py-32 px-6 md:px-12 lg:px-20">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-24 md:py-32 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         <Reveal><span className="section-label">▸ Clientes</span></Reveal>
         <Reveal delay={100}>
           <h2 className="text-jr-white font-display uppercase mt-6 text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
@@ -459,19 +460,22 @@ function Clientes() {
             Algumas das empresas que já contaram com nosso atendimento.
           </p>
         </Reveal>
+      </div>
 
-        <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-5">
-          {clientes.map((src, i) => (
-            <Reveal key={i} delay={i * 80}>
-              <div className="relative aspect-square bg-jr-black-soft border border-jr-red/20 overflow-hidden group">
-                <img
-                  src={src}
-                  alt={`Empresa atendida ${i + 1}`}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-            </Reveal>
+      <div className="mt-14 marquee-mask overflow-hidden">
+        <div className="flex w-max animate-marquee gap-5 pr-5">
+          {loop.map((src, i) => (
+            <div
+              key={i}
+              className="relative w-[260px] md:w-[320px] aspect-square shrink-0 bg-jr-black-soft border border-jr-red/20 overflow-hidden"
+            >
+              <img
+                src={src}
+                alt={`Empresa atendida ${(i % clientes.length) + 1}`}
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
           ))}
         </div>
       </div>
