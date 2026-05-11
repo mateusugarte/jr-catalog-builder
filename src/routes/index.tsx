@@ -55,52 +55,76 @@ function Index() {
 /* ============== HEADER ============== */
 function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-jr-black/70 border-b border-jr-red/20">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 lg:px-20 py-3">
-        <div className="flex items-center gap-3">
+    <header className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-jr-black/80 border-b border-jr-red/20">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-5 md:px-12 lg:px-20 py-2.5 md:py-3">
+        <div className="flex items-center gap-2.5 md:gap-3 min-w-0">
           <img
             src={jrLogo}
             alt="JR Balanças e Máquinas"
-            className="w-11 h-11 md:w-12 md:h-12 object-cover rounded-full border-2 border-jr-red/60 shadow-[0_0_18px_oklch(0.535_0.215_25/0.35)]"
+            className="w-10 h-10 md:w-12 md:h-12 object-cover rounded-full border-2 border-jr-red/60 shadow-[0_0_18px_oklch(0.535_0.215_25/0.35)] shrink-0"
           />
-          <div className="leading-tight">
-            <div className="font-display font-black uppercase text-jr-white text-base md:text-lg tracking-wide">
+          <div className="leading-tight min-w-0">
+            <div className="font-display font-black uppercase text-jr-white text-sm md:text-lg tracking-wide truncate">
               JR Balanças <span className="text-jr-red">&</span> Máquinas
             </div>
-            <div className="font-mono-tech text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-jr-gray-dark">
+            <div className="font-mono-tech text-[8px] md:text-[10px] tracking-[0.2em] uppercase text-jr-gray-dark">
               Desde 2009 · Grande SP
             </div>
           </div>
         </div>
         <a
           href="tel:+5511994803895"
+          aria-label="Ligar para JR"
           className="hidden sm:inline-flex items-center gap-2 font-mono-tech text-xs tracking-wider uppercase text-jr-white border border-jr-red/40 hover:border-jr-red px-3 py-2 transition-colors"
         >
           <Phone className="w-3.5 h-3.5 text-jr-red" />
           (11) 99480-3895
+        </a>
+        <a
+          href="tel:+5511994803895"
+          aria-label="Ligar para JR"
+          className="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-jr-red/50 bg-jr-red/10 text-jr-white shrink-0 active:scale-95 transition"
+        >
+          <Phone className="w-4 h-4 text-jr-red" />
         </a>
       </div>
     </header>
   );
 }
 
+/* ============== FLOATING WHATSAPP ============== */
+function FloatingWhats() {
+  return (
+    <a
+      href="https://wa.me/5511994803895"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar no WhatsApp"
+      className="md:hidden fixed bottom-5 right-5 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-jr-red text-jr-white shadow-[0_8px_30px_oklch(0.535_0.215_25/0.55)] active:scale-95 transition"
+    >
+      <span className="absolute inset-0 rounded-full bg-jr-red/40 animate-ping" />
+      <MessageCircle className="w-6 h-6 relative" />
+    </a>
+  );
+}
+
 /* ============== HERO ============== */
 function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-28 pb-20 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center px-5 md:px-12 lg:px-20 pt-24 md:pt-28 pb-16 md:pb-20 overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto w-full">
         <Reveal>
-          <div className="flex items-center gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5 mb-7 md:mb-8">
             <img
               src={jrLogo}
               alt="JR Balanças e Máquinas"
-              className="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full border-2 border-jr-red shadow-[0_0_30px_oklch(0.535_0.215_25/0.45)]"
+              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-cover rounded-full border-2 border-jr-red shadow-[0_0_30px_oklch(0.535_0.215_25/0.45)]"
             />
             <div>
-              <div className="font-display font-black uppercase text-jr-white text-2xl md:text-4xl leading-none">
+              <div className="font-display font-black uppercase text-jr-white text-xl sm:text-2xl md:text-4xl leading-none">
                 JR Balanças <span className="text-jr-red">&</span> Máquinas
               </div>
-              <div className="mt-1 font-mono-tech text-[11px] md:text-xs tracking-[0.2em] uppercase text-jr-gray">
+              <div className="mt-1.5 font-mono-tech text-[10px] sm:text-[11px] md:text-xs tracking-[0.2em] uppercase text-jr-gray">
                 15 anos · Grande São Paulo
               </div>
             </div>
@@ -108,15 +132,15 @@ function Hero() {
         </Reveal>
 
         <Reveal delay={120}>
-          <span className="inline-flex items-center gap-2 border border-jr-red/60 px-3 py-1.5 text-jr-white font-mono-tech text-[11px] tracking-[0.18em] uppercase">
+          <span className="inline-flex items-center gap-2 border border-jr-red/60 px-3 py-1.5 text-jr-white font-mono-tech text-[10px] sm:text-[11px] tracking-[0.18em] uppercase">
             <span className="text-jr-red">▸</span> Atendimento In Loco
           </span>
         </Reveal>
 
         <Reveal delay={200}>
           <h1
-            className="font-display font-black uppercase leading-[0.92] mt-8 text-jr-white"
-            style={{ fontSize: "clamp(44px, 9vw, 110px)" }}
+            className="font-display font-black uppercase leading-[0.92] mt-6 md:mt-8 text-jr-white"
+            style={{ fontSize: "clamp(38px, 9vw, 110px)" }}
           >
             Conserto e manutenção
             <br />
@@ -125,19 +149,40 @@ function Hero() {
         </Reveal>
 
         <Reveal delay={300}>
-          <p className="mt-8 text-jr-gray font-sans text-base md:text-lg max-w-2xl leading-relaxed">
+          <p className="mt-6 md:mt-8 text-jr-gray font-sans text-[15px] md:text-lg max-w-2xl leading-relaxed">
             15 anos de expertise. Atendimento rápido onde sua máquina está.
             Especialistas em máquinas de frios e a vácuo.
           </p>
         </Reveal>
 
-        <Reveal delay={380}>
-          <div className="accent-bar my-8" />
+        <Reveal delay={360}>
+          <div className="mt-7 md:mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <a
+              href="https://wa.me/5511994803895"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-jr-red text-jr-white font-mono-tech text-xs tracking-[0.18em] uppercase px-5 py-3.5 hover:bg-jr-red-vivid transition-colors active:scale-[0.98]"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Falar no WhatsApp
+            </a>
+            <a
+              href="tel:+5511994803895"
+              className="inline-flex items-center justify-center gap-2 border border-jr-red/60 text-jr-white font-mono-tech text-xs tracking-[0.18em] uppercase px-5 py-3.5 hover:border-jr-red transition-colors active:scale-[0.98]"
+            >
+              <Phone className="w-4 h-4 text-jr-red" />
+              (11) 99480-3895
+            </a>
+          </div>
+        </Reveal>
+
+        <Reveal delay={440}>
+          <div className="accent-bar mt-8 md:mt-10" />
         </Reveal>
       </div>
 
-      <div className="absolute bottom-8 right-8 z-10 text-jr-red animate-bounce-down">
-        <ChevronDown className="w-7 h-7" />
+      <div className="absolute bottom-6 right-6 md:bottom-8 md:right-8 z-10 text-jr-red animate-bounce-down">
+        <ChevronDown className="w-6 h-6 md:w-7 md:h-7" />
       </div>
     </section>
   );
