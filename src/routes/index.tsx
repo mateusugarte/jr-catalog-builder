@@ -315,7 +315,7 @@ const SUPABASE_BASE = "https://jlzckqjggdzpzqiuvgcv.supabase.co/storage/v1/objec
 
 const reparos = [
   {
-    antes: `${SUPABASE_BASE}/WhatsApp%20Image%202026-05-11%20at%2010.52.53.jpeg`,
+    antes: `${SUPABASE_BASE}/antes%201.jpeg`,
     depois: `${SUPABASE_BASE}/depois%201.jpeg`,
   },
   {
