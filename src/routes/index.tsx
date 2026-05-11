@@ -539,13 +539,13 @@ function Diferenciais() {
           </h2>
         </Reveal>
 
-        <div className="mt-16 grid md:grid-cols-2 gap-x-12 gap-y-12">
+        <div className="mt-10 md:mt-16 grid md:grid-cols-2 gap-x-12 gap-y-9 md:gap-y-12">
           {diferenciais.map((d, i) => (
             <Reveal key={d.title} delay={(i % 2) * 80}>
-              <div className="flex gap-5">
-                <d.Icon className="w-9 h-9 shrink-0 text-jr-black mt-1" strokeWidth={1.5} />
+              <div className="flex gap-4 md:gap-5">
+                <d.Icon className="w-8 h-8 md:w-9 md:h-9 shrink-0 text-jr-black mt-1" strokeWidth={1.5} />
                 <div>
-                  <h3 className="font-display font-bold uppercase text-jr-black text-2xl tracking-wide">
+                  <h3 className="font-display font-bold uppercase text-jr-black text-xl md:text-2xl tracking-wide">
                     {d.title}
                   </h3>
                   <p className="mt-2 text-jr-black/75 text-[15px] leading-relaxed">
@@ -564,7 +564,7 @@ function Diferenciais() {
 /* ============== FOOTER ============== */
 function Footer() {
   return (
-    <footer className="bg-jr-black border-t-2 border-jr-red py-20 px-6 md:px-12 lg:px-20">
+    <footer className="bg-jr-black border-t-2 border-jr-red py-14 md:py-20 px-5 md:px-12 lg:px-20 pb-24 md:pb-20">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-4">
           <img
