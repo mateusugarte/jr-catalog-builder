@@ -9,7 +9,6 @@ import {
   MapPin,
   MessageCircle,
   ArrowRight,
-  ArrowDown,
   Slice,
   Package,
   Wind,
@@ -37,24 +36,18 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="relative">
-      <div
-        className="bg-logo-watermark"
-        style={{ backgroundImage: `url(${jrLogo})` }}
-        aria-hidden
-      />
-      <div className="relative z-[2]">
-        <ScrollProgress />
-        <Header />
-        <Hero />
-        <Sobre />
-        <Servicos />
-        <Segmentos />
-        <Cases />
-        <Galeria />
-        <Clientes />
-        <Diferenciais />
-        <Footer />
-      </div>
+      <ScrollProgress />
+      <Header />
+      <Hero />
+      <Sobre />
+      <Servicos />
+      <Segmentos />
+      <Cases />
+      <Galeria />
+      <Clientes />
+      <Diferenciais />
+      <Footer />
+      <FloatingWhats />
     </div>
   );
 }
@@ -62,52 +55,76 @@ function Index() {
 /* ============== HEADER ============== */
 function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-jr-black/70 border-b border-jr-red/20">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 lg:px-20 py-3">
-        <div className="flex items-center gap-3">
+    <header className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-jr-black/80 border-b border-jr-red/20">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-5 md:px-12 lg:px-20 py-2.5 md:py-3">
+        <div className="flex items-center gap-2.5 md:gap-3 min-w-0">
           <img
             src={jrLogo}
             alt="JR Balanças e Máquinas"
-            className="w-11 h-11 md:w-12 md:h-12 object-cover rounded-full border-2 border-jr-red/60 shadow-[0_0_18px_oklch(0.535_0.215_25/0.35)]"
+            className="w-10 h-10 md:w-12 md:h-12 object-cover rounded-full border-2 border-jr-red/60 shadow-[0_0_18px_oklch(0.535_0.215_25/0.35)] shrink-0"
           />
-          <div className="leading-tight">
-            <div className="font-display font-black uppercase text-jr-white text-base md:text-lg tracking-wide">
+          <div className="leading-tight min-w-0">
+            <div className="font-display font-black uppercase text-jr-white text-sm md:text-lg tracking-wide truncate">
               JR Balanças <span className="text-jr-red">&</span> Máquinas
             </div>
-            <div className="font-mono-tech text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-jr-gray-dark">
+            <div className="font-mono-tech text-[8px] md:text-[10px] tracking-[0.2em] uppercase text-jr-gray-dark">
               Desde 2009 · Grande SP
             </div>
           </div>
         </div>
         <a
           href="tel:+5511994803895"
+          aria-label="Ligar para JR"
           className="hidden sm:inline-flex items-center gap-2 font-mono-tech text-xs tracking-wider uppercase text-jr-white border border-jr-red/40 hover:border-jr-red px-3 py-2 transition-colors"
         >
           <Phone className="w-3.5 h-3.5 text-jr-red" />
           (11) 99480-3895
+        </a>
+        <a
+          href="tel:+5511994803895"
+          aria-label="Ligar para JR"
+          className="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-jr-red/50 bg-jr-red/10 text-jr-white shrink-0 active:scale-95 transition"
+        >
+          <Phone className="w-4 h-4 text-jr-red" />
         </a>
       </div>
     </header>
   );
 }
 
+/* ============== FLOATING WHATSAPP ============== */
+function FloatingWhats() {
+  return (
+    <a
+      href="https://wa.me/5511994803895"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar no WhatsApp"
+      className="md:hidden fixed bottom-5 right-5 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-jr-red text-jr-white shadow-[0_8px_30px_oklch(0.535_0.215_25/0.55)] active:scale-95 transition"
+    >
+      <span className="absolute inset-0 rounded-full bg-jr-red/40 animate-ping" />
+      <MessageCircle className="w-6 h-6 relative" />
+    </a>
+  );
+}
+
 /* ============== HERO ============== */
 function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-28 pb-20 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center px-5 md:px-12 lg:px-20 pt-24 md:pt-28 pb-16 md:pb-20 overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto w-full">
         <Reveal>
-          <div className="flex items-center gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5 mb-7 md:mb-8">
             <img
               src={jrLogo}
               alt="JR Balanças e Máquinas"
-              className="w-20 h-20 md:w-24 md:h-24 object-cover rounded-full border-2 border-jr-red shadow-[0_0_30px_oklch(0.535_0.215_25/0.45)]"
+              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-cover rounded-full border-2 border-jr-red shadow-[0_0_30px_oklch(0.535_0.215_25/0.45)]"
             />
             <div>
-              <div className="font-display font-black uppercase text-jr-white text-2xl md:text-4xl leading-none">
+              <div className="font-display font-black uppercase text-jr-white text-xl sm:text-2xl md:text-4xl leading-none">
                 JR Balanças <span className="text-jr-red">&</span> Máquinas
               </div>
-              <div className="mt-1 font-mono-tech text-[11px] md:text-xs tracking-[0.2em] uppercase text-jr-gray">
+              <div className="mt-1.5 font-mono-tech text-[10px] sm:text-[11px] md:text-xs tracking-[0.2em] uppercase text-jr-gray">
                 15 anos · Grande São Paulo
               </div>
             </div>
@@ -115,15 +132,15 @@ function Hero() {
         </Reveal>
 
         <Reveal delay={120}>
-          <span className="inline-flex items-center gap-2 border border-jr-red/60 px-3 py-1.5 text-jr-white font-mono-tech text-[11px] tracking-[0.18em] uppercase">
+          <span className="inline-flex items-center gap-2 border border-jr-red/60 px-3 py-1.5 text-jr-white font-mono-tech text-[10px] sm:text-[11px] tracking-[0.18em] uppercase">
             <span className="text-jr-red">▸</span> Atendimento In Loco
           </span>
         </Reveal>
 
         <Reveal delay={200}>
           <h1
-            className="font-display font-black uppercase leading-[0.92] mt-8 text-jr-white"
-            style={{ fontSize: "clamp(44px, 9vw, 110px)" }}
+            className="font-display font-black uppercase leading-[0.92] mt-6 md:mt-8 text-jr-white"
+            style={{ fontSize: "clamp(38px, 9vw, 110px)" }}
           >
             Conserto e manutenção
             <br />
@@ -132,19 +149,40 @@ function Hero() {
         </Reveal>
 
         <Reveal delay={300}>
-          <p className="mt-8 text-jr-gray font-sans text-base md:text-lg max-w-2xl leading-relaxed">
+          <p className="mt-6 md:mt-8 text-jr-gray font-sans text-[15px] md:text-lg max-w-2xl leading-relaxed">
             15 anos de expertise. Atendimento rápido onde sua máquina está.
             Especialistas em máquinas de frios e a vácuo.
           </p>
         </Reveal>
 
-        <Reveal delay={380}>
-          <div className="accent-bar my-8" />
+        <Reveal delay={360}>
+          <div className="mt-7 md:mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <a
+              href="https://wa.me/5511994803895"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-jr-red text-jr-white font-mono-tech text-xs tracking-[0.18em] uppercase px-5 py-3.5 hover:bg-jr-red-vivid transition-colors active:scale-[0.98]"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Falar no WhatsApp
+            </a>
+            <a
+              href="tel:+5511994803895"
+              className="inline-flex items-center justify-center gap-2 border border-jr-red/60 text-jr-white font-mono-tech text-xs tracking-[0.18em] uppercase px-5 py-3.5 hover:border-jr-red transition-colors active:scale-[0.98]"
+            >
+              <Phone className="w-4 h-4 text-jr-red" />
+              (11) 99480-3895
+            </a>
+          </div>
+        </Reveal>
+
+        <Reveal delay={440}>
+          <div className="accent-bar mt-8 md:mt-10" />
         </Reveal>
       </div>
 
-      <div className="absolute bottom-8 right-8 z-10 text-jr-red animate-bounce-down">
-        <ChevronDown className="w-7 h-7" />
+      <div className="absolute bottom-6 right-6 md:bottom-8 md:right-8 z-10 text-jr-red animate-bounce-down">
+        <ChevronDown className="w-6 h-6 md:w-7 md:h-7" />
       </div>
     </section>
   );
@@ -153,21 +191,19 @@ function Hero() {
 /* ============== SOBRE ============== */
 function Sobre() {
   return (
-    <section className="relative bg-jr-black-medium py-24 md:py-32 px-6 md:px-12 lg:px-20">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+    <section className="relative bg-jr-black-medium py-16 md:py-32 px-5 md:px-12 lg:px-20">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
         <div>
           <Reveal>
             <span className="section-label">▸ Sobre a JR</span>
           </Reveal>
           <Reveal delay={100}>
-            <h2 className="text-jr-white font-display uppercase leading-[0.95] mt-6 text-4xl md:text-5xl lg:text-[56px]">
-              Autoridade em maquinário
-              <br />
-              industrial há 15 anos
+            <h2 className="text-jr-white font-display uppercase leading-[0.95] mt-5 md:mt-6 text-[34px] sm:text-4xl md:text-5xl lg:text-[56px]">
+              Autoridade em maquinário industrial há 15 anos
             </h2>
           </Reveal>
           <Reveal delay={200}>
-            <p className="mt-8 text-jr-gray text-base leading-[1.75]">
+            <p className="mt-6 md:mt-8 text-jr-gray text-[15px] md:text-base leading-[1.75]">
               A JR Balanças e Máquinas nasceu do chão de fábrica — do contato direto
               com açougues, mercados e indústrias que não podem parar. Em 15 anos,
               construímos uma reputação baseada em diagnóstico rápido, reparo
@@ -175,7 +211,7 @@ function Sobre() {
             </p>
           </Reveal>
           <Reveal delay={280}>
-            <p className="mt-6 text-jr-white text-base leading-[1.75] border-l-[3px] border-jr-red pl-5">
+            <p className="mt-6 text-jr-white text-[15px] md:text-base leading-[1.75] border-l-[3px] border-jr-red pl-4 md:pl-5">
               Não trabalhamos com soluções genéricas. Cada equipamento tem sua
               especificidade, e é com esse nível de atenção que atendemos toda a
               Grande São Paulo — e interior sob acordo.
@@ -183,18 +219,19 @@ function Sobre() {
           </Reveal>
         </div>
 
-        <div className="grid gap-5">
+        <div className="grid grid-cols-3 lg:grid-cols-1 gap-3 sm:gap-4 lg:gap-5">
           {[
             { value: <><Counter to={15} />+</>, label: "Anos de mercado" },
-            { value: "Grande SP", label: "Área de atuação" },
+            { value: "GRSP", lgValue: "Grande SP", label: "Área de atuação" },
             { value: "In Loco", label: "Atendimento" },
-          ].map((s, i) => (
+          ].map((s: any, i) => (
             <Reveal key={i} delay={i * 120}>
-              <div className="bg-jr-black-soft border border-jr-red/25 p-8 rounded-sm">
-                <div className="font-display font-black text-jr-red leading-none text-5xl md:text-6xl lg:text-7xl">
-                  {s.value}
+              <div className="bg-jr-black-soft border border-jr-red/25 p-4 sm:p-6 lg:p-8 rounded-sm h-full">
+                <div className="font-display font-black text-jr-red leading-none text-3xl sm:text-4xl lg:text-7xl">
+                  <span className="lg:hidden">{s.value}</span>
+                  <span className="hidden lg:inline">{s.lgValue ?? s.value}</span>
                 </div>
-                <div className="mt-3 font-mono-tech text-[11px] tracking-[0.2em] uppercase text-jr-gray">
+                <div className="mt-2 lg:mt-3 font-mono-tech text-[9px] sm:text-[10px] lg:text-[11px] tracking-[0.18em] uppercase text-jr-gray leading-tight">
                   {s.label}
                 </div>
               </div>
@@ -219,11 +256,11 @@ const servicos = [
 
 function Servicos() {
   return (
-    <section className="relative py-24 md:py-32 px-6 md:px-12 lg:px-20">
+    <section className="relative py-16 md:py-32 px-5 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <Reveal><span className="section-label">▸ Serviços</span></Reveal>
         <Reveal delay={100}>
-          <h2 className="text-jr-white font-display uppercase mt-6 text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
+          <h2 className="text-jr-white font-display uppercase mt-5 md:mt-6 text-[34px] sm:text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
             Máquinas que dominamos
           </h2>
         </Reveal>
@@ -246,7 +283,7 @@ function Servicos() {
 
       {/* Especialidades faixa */}
       <Reveal>
-        <div className="mt-20 -mx-6 md:-mx-12 lg:-mx-20 bg-jr-red px-6 md:px-12 lg:px-20 py-14 text-center">
+        <div className="mt-20 -mx-5 md:-mx-12 lg:-mx-20 bg-jr-red px-5 md:px-12 lg:px-20 py-12 md:py-14 text-center">
           <h3 className="font-display font-extrabold uppercase text-jr-black text-3xl md:text-4xl lg:text-[40px] leading-tight">
             Especialistas em máquinas de frios e máquinas a vácuo
           </h3>
@@ -273,11 +310,11 @@ const segmentos = [
 function Segmentos() {
   const loop = [...segmentos, ...segmentos];
   return (
-    <section className="bg-jr-black-medium py-24 md:py-32 px-6 md:px-12 lg:px-20 overflow-hidden">
+    <section className="bg-jr-black-medium py-16 md:py-32 px-5 md:px-12 lg:px-20 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <Reveal><span className="section-label">▸ Quem atendemos</span></Reveal>
         <Reveal delay={100}>
-          <h2 className="text-jr-white font-display uppercase mt-6 text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
+          <h2 className="text-jr-white font-display uppercase mt-5 md:mt-6 text-[34px] sm:text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
             Do açougue ao restaurante
           </h2>
         </Reveal>
@@ -347,35 +384,34 @@ function CaseImage({ src, label }: { src: string; label: "ANTES" | "DEPOIS" }) {
 
 function Cases() {
   return (
-    <section className="py-24 md:py-32 px-6 md:px-12 lg:px-20">
+    <section className="py-16 md:py-32 px-5 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <Reveal><span className="section-label">▸ Nossos cases</span></Reveal>
         <Reveal delay={100}>
-          <h2 className="text-jr-white font-display uppercase mt-6 text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
+          <h2 className="text-jr-white font-display uppercase mt-5 md:mt-6 text-[34px] sm:text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
             O antes e o depois
           </h2>
         </Reveal>
         <Reveal delay={180}>
-          <p className="mt-6 text-jr-gray text-lg max-w-2xl">
+          <p className="mt-5 md:mt-6 text-jr-gray text-[15px] md:text-lg max-w-2xl">
             Equipamentos realmente restaurados. Resultados reais.
           </p>
         </Reveal>
 
-        <div className="mt-16 grid lg:grid-cols-2 gap-8">
+        <div className="mt-10 md:mt-16 grid lg:grid-cols-2 gap-6 md:gap-8">
           {reparos.map((r, i) => (
             <Reveal key={i} delay={(i % 2) * 100}>
-              <div className="jr-card p-6 md:p-8 rounded-sm">
-                <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-3 items-center">
+              <div className="jr-card p-4 sm:p-6 md:p-8 rounded-sm">
+                <div className="grid grid-cols-2 md:grid-cols-[1fr_auto_1fr] gap-3 md:gap-3 items-center">
                   <CaseImage src={r.antes} label="ANTES" />
-                  <div className="flex md:flex-col items-center justify-center text-jr-red">
-                    <ArrowRight className="hidden md:block w-7 h-7" />
-                    <ArrowDown className="md:hidden w-7 h-7" />
+                  <div className="hidden md:flex flex-col items-center justify-center text-jr-red">
+                    <ArrowRight className="w-7 h-7" />
                   </div>
                   <CaseImage src={r.depois} label="DEPOIS" />
                 </div>
-                <div className="mt-6 flex items-center gap-3">
-                  <div className="h-[2px] w-10 bg-jr-red" />
-                  <h3 className="font-display uppercase text-jr-white text-2xl tracking-wide">
+                <div className="mt-5 md:mt-6 flex items-center gap-3">
+                  <div className="h-[2px] w-8 md:w-10 bg-jr-red" />
+                  <h3 className="font-display uppercase text-jr-white text-xl md:text-2xl tracking-wide">
                     Antes × Depois
                   </h3>
                 </div>
@@ -402,11 +438,11 @@ const maquinasPronas = [
 
 function Galeria() {
   return (
-    <section className="bg-jr-black-medium py-24 md:py-32 px-6 md:px-12 lg:px-20">
+    <section className="bg-jr-black-medium py-16 md:py-32 px-5 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <Reveal><span className="section-label">▸ Máquinas reparadas</span></Reveal>
         <Reveal delay={100}>
-          <h2 className="text-jr-white font-display uppercase mt-6 text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
+          <h2 className="text-jr-white font-display uppercase mt-5 md:mt-6 text-[34px] sm:text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
             Prontas para operar
           </h2>
         </Reveal>
@@ -451,7 +487,7 @@ function Clientes() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         <Reveal><span className="section-label">▸ Clientes</span></Reveal>
         <Reveal delay={100}>
-          <h2 className="text-jr-white font-display uppercase mt-6 text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
+          <h2 className="text-jr-white font-display uppercase mt-5 md:mt-6 text-[34px] sm:text-4xl md:text-5xl lg:text-[56px] leading-[0.95]">
             Empresas que confiam na JR
           </h2>
         </Reveal>
@@ -495,21 +531,21 @@ const diferenciais = [
 
 function Diferenciais() {
   return (
-    <section className="bg-jr-red py-24 md:py-32 px-6 md:px-12 lg:px-20">
+    <section className="bg-jr-red py-16 md:py-32 px-5 md:px-12 lg:px-20">
       <div className="max-w-6xl mx-auto">
         <Reveal>
-          <h2 className="text-jr-black font-display font-black uppercase text-center text-5xl md:text-6xl lg:text-[64px] leading-[0.95]">
+          <h2 className="text-jr-black font-display font-black uppercase text-center text-[40px] sm:text-5xl md:text-6xl lg:text-[64px] leading-[0.95]">
             Por que a JR?
           </h2>
         </Reveal>
 
-        <div className="mt-16 grid md:grid-cols-2 gap-x-12 gap-y-12">
+        <div className="mt-10 md:mt-16 grid md:grid-cols-2 gap-x-12 gap-y-9 md:gap-y-12">
           {diferenciais.map((d, i) => (
             <Reveal key={d.title} delay={(i % 2) * 80}>
-              <div className="flex gap-5">
-                <d.Icon className="w-9 h-9 shrink-0 text-jr-black mt-1" strokeWidth={1.5} />
+              <div className="flex gap-4 md:gap-5">
+                <d.Icon className="w-8 h-8 md:w-9 md:h-9 shrink-0 text-jr-black mt-1" strokeWidth={1.5} />
                 <div>
-                  <h3 className="font-display font-bold uppercase text-jr-black text-2xl tracking-wide">
+                  <h3 className="font-display font-bold uppercase text-jr-black text-xl md:text-2xl tracking-wide">
                     {d.title}
                   </h3>
                   <p className="mt-2 text-jr-black/75 text-[15px] leading-relaxed">
@@ -528,7 +564,7 @@ function Diferenciais() {
 /* ============== FOOTER ============== */
 function Footer() {
   return (
-    <footer className="bg-jr-black border-t-2 border-jr-red py-20 px-6 md:px-12 lg:px-20">
+    <footer className="bg-jr-black border-t-2 border-jr-red py-14 md:py-20 px-5 md:px-12 lg:px-20 pb-24 md:pb-20">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-4">
           <img
