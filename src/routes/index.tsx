@@ -193,20 +193,18 @@ function Hero() {
 function Sobre() {
   return (
     <section className="relative bg-jr-black-medium py-16 md:py-32 px-5 md:px-12 lg:px-20">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
         <div>
           <Reveal>
             <span className="section-label">▸ Sobre a JR</span>
           </Reveal>
           <Reveal delay={100}>
-            <h2 className="text-jr-white font-display uppercase leading-[0.95] mt-6 text-4xl md:text-5xl lg:text-[56px]">
-              Autoridade em maquinário
-              <br />
-              industrial há 15 anos
+            <h2 className="text-jr-white font-display uppercase leading-[0.95] mt-5 md:mt-6 text-[34px] sm:text-4xl md:text-5xl lg:text-[56px]">
+              Autoridade em maquinário industrial há 15 anos
             </h2>
           </Reveal>
           <Reveal delay={200}>
-            <p className="mt-8 text-jr-gray text-base leading-[1.75]">
+            <p className="mt-6 md:mt-8 text-jr-gray text-[15px] md:text-base leading-[1.75]">
               A JR Balanças e Máquinas nasceu do chão de fábrica — do contato direto
               com açougues, mercados e indústrias que não podem parar. Em 15 anos,
               construímos uma reputação baseada em diagnóstico rápido, reparo
@@ -214,7 +212,7 @@ function Sobre() {
             </p>
           </Reveal>
           <Reveal delay={280}>
-            <p className="mt-6 text-jr-white text-base leading-[1.75] border-l-[3px] border-jr-red pl-5">
+            <p className="mt-6 text-jr-white text-[15px] md:text-base leading-[1.75] border-l-[3px] border-jr-red pl-4 md:pl-5">
               Não trabalhamos com soluções genéricas. Cada equipamento tem sua
               especificidade, e é com esse nível de atenção que atendemos toda a
               Grande São Paulo — e interior sob acordo.
@@ -222,18 +220,19 @@ function Sobre() {
           </Reveal>
         </div>
 
-        <div className="grid gap-5">
+        <div className="grid grid-cols-3 lg:grid-cols-1 gap-3 sm:gap-4 lg:gap-5">
           {[
             { value: <><Counter to={15} />+</>, label: "Anos de mercado" },
-            { value: "Grande SP", label: "Área de atuação" },
+            { value: "GRSP", lgValue: "Grande SP", label: "Área de atuação" },
             { value: "In Loco", label: "Atendimento" },
-          ].map((s, i) => (
+          ].map((s: any, i) => (
             <Reveal key={i} delay={i * 120}>
-              <div className="bg-jr-black-soft border border-jr-red/25 p-8 rounded-sm">
-                <div className="font-display font-black text-jr-red leading-none text-5xl md:text-6xl lg:text-7xl">
-                  {s.value}
+              <div className="bg-jr-black-soft border border-jr-red/25 p-4 sm:p-6 lg:p-8 rounded-sm h-full">
+                <div className="font-display font-black text-jr-red leading-none text-3xl sm:text-4xl lg:text-7xl">
+                  <span className="lg:hidden">{s.value}</span>
+                  <span className="hidden lg:inline">{s.lgValue ?? s.value}</span>
                 </div>
-                <div className="mt-3 font-mono-tech text-[11px] tracking-[0.2em] uppercase text-jr-gray">
+                <div className="mt-2 lg:mt-3 font-mono-tech text-[9px] sm:text-[10px] lg:text-[11px] tracking-[0.18em] uppercase text-jr-gray leading-tight">
                   {s.label}
                 </div>
               </div>
