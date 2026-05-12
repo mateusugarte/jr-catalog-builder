@@ -73,7 +73,7 @@ function Header() {
           </div>
         </div>
         <a
-          href="https://wa.me/5511960477538?utm_source=chatgpt.com"
+          href="https://wa.me/5511940817698?utm_source=chatgpt.com"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Falar no WhatsApp"
@@ -83,7 +83,7 @@ function Header() {
           WhatsApp
         </a>
         <a
-          href="https://wa.me/5511960477538?utm_source=chatgpt.com"
+          href="https://wa.me/5511940817698?utm_source=chatgpt.com"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Falar no WhatsApp"
@@ -100,7 +100,7 @@ function Header() {
 function FloatingWhats() {
   return (
     <a
-      href="https://wa.me/5511960477538?utm_source=chatgpt.com"
+      href="https://wa.me/5511940817698?utm_source=chatgpt.com"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"
@@ -162,7 +162,7 @@ function Hero() {
         <Reveal delay={360}>
           <div className="mt-7 md:mt-9">
             <a
-              href="https://wa.me/5511960477538?utm_source=chatgpt.com"
+              href="https://wa.me/5511940817698?utm_source=chatgpt.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-jr-red text-jr-white font-mono-tech text-xs tracking-[0.18em] uppercase px-6 py-4 hover:bg-jr-red-vivid transition-colors active:scale-[0.98] shadow-[0_8px_30px_oklch(0.55_0.17_250/0.4)]"
@@ -590,7 +590,7 @@ function Footer() {
               <Phone className="w-4 h-4 text-jr-red" />
               <span className="uppercase tracking-[0.18em] text-[11px] text-jr-gray-dark">Telefone</span>
             </div>
-            <p className="mt-3 text-jr-white text-base">(11) 99480-3895</p>
+            <p className="mt-3 text-jr-white text-base">(11) 94081-7698</p>
             <p className="mt-1 flex items-center gap-2 text-jr-gray text-xs">
               <MessageCircle className="w-3.5 h-3.5" /> WhatsApp disponível
             </p>
