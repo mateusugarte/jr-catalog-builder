@@ -61,7 +61,7 @@ function Header() {
           <img
             src={jrLogo}
             alt="JR Balanças e Máquinas"
-            className="w-10 h-10 md:w-12 md:h-12 object-cover rounded-full border-2 border-jr-red/60 shadow-[0_0_18px_oklch(0.535_0.215_25/0.35)] shrink-0"
+            className="w-10 h-10 md:w-12 md:h-12 object-cover rounded-full border-2 border-jr-red/60 shadow-[0_0_18px_oklch(0.55_0.17_250/0.35)] shrink-0"
           />
           <div className="leading-tight min-w-0">
             <div className="font-display font-black uppercase text-jr-white text-sm md:text-lg tracking-wide truncate">
@@ -104,7 +104,7 @@ function FloatingWhats() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"
-      className="md:hidden fixed bottom-5 right-5 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-jr-red text-jr-white shadow-[0_8px_30px_oklch(0.535_0.215_25/0.55)] active:scale-95 transition"
+      className="md:hidden fixed bottom-5 right-5 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-jr-red text-jr-white shadow-[0_8px_30px_oklch(0.55_0.17_250/0.55)] active:scale-95 transition"
     >
       <span className="absolute inset-0 rounded-full bg-jr-red/40 animate-ping" />
       <MessageCircle className="w-6 h-6 relative" />
@@ -122,7 +122,7 @@ function Hero() {
             <img
               src={jrLogo}
               alt="JR Balanças e Máquinas"
-              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-cover rounded-full border-2 border-jr-red shadow-[0_0_30px_oklch(0.535_0.215_25/0.45)]"
+              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-cover rounded-full border-2 border-jr-red shadow-[0_0_30px_oklch(0.55_0.17_250/0.45)]"
             />
             <div>
               <div className="font-display font-black uppercase text-jr-white text-xl sm:text-2xl md:text-4xl leading-none">
@@ -165,7 +165,7 @@ function Hero() {
               href="https://wa.me/5511960477538?utm_source=chatgpt.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-jr-red text-jr-white font-mono-tech text-xs tracking-[0.18em] uppercase px-6 py-4 hover:bg-jr-red-vivid transition-colors active:scale-[0.98] shadow-[0_8px_30px_oklch(0.535_0.215_25/0.4)]"
+              className="inline-flex items-center justify-center gap-2 bg-jr-red text-jr-white font-mono-tech text-xs tracking-[0.18em] uppercase px-6 py-4 hover:bg-jr-red-vivid transition-colors active:scale-[0.98] shadow-[0_8px_30px_oklch(0.55_0.17_250/0.4)]"
             >
               <MessageCircle className="w-4 h-4" />
               Falar no WhatsApp
@@ -523,6 +523,7 @@ const diferenciais = [
   { title: "15 anos de especialização", desc: "Conhecimento acumulado em décadas de serviço no segmento industrial.", Icon: Wrench },
   { title: "Grande São Paulo", desc: "Cobertura completa da Grande SP. Interior sob acordo.", Icon: MapIcon },
   { title: "Especialistas em frios e vácuo", desc: "Os maquinários mais críticos e complexos são nossa principal especialidade.", Icon: Snowflake },
+  { title: "Especialistas em serra fita", desc: "Manutenção, afiação e ajustes de equipamentos de serra fita com precisão e segurança.", Icon: Wrench },
   { title: "Atendimento a qualquer segmento", desc: "Açougues, mercados, padarias, restaurantes, indústrias — atendemos toda a cadeia.", Icon: Handshake },
 ];
 
@@ -567,7 +568,7 @@ function Footer() {
           <img
             src={jrLogo}
             alt="JR Balanças e Máquinas"
-            className="w-16 h-16 object-cover rounded-full border-2 border-jr-red/50 shadow-[0_0_20px_oklch(0.535_0.215_25/0.35)]"
+            className="w-16 h-16 object-cover rounded-full border-2 border-jr-red/50 shadow-[0_0_20px_oklch(0.55_0.17_250/0.35)]"
           />
           <div>
             <h2 className="font-display font-extrabold uppercase text-jr-white text-3xl md:text-[32px] tracking-wide leading-none">
