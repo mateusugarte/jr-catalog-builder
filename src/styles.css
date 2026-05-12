@@ -71,7 +71,7 @@
   --accent-foreground: var(--jr-white);
   --destructive: oklch(0.6 0.22 25);
   --destructive-foreground: var(--jr-white);
-  --border: oklch(0.535 0.215 25 / 0.2);
+  --border: oklch(0.55 0.17 250 / 0.2);
   --input: var(--jr-black-soft);
   --ring: var(--jr-red);
 }
@@ -142,13 +142,13 @@
 
   .jr-card {
     background: var(--jr-black-medium);
-    border: 1px solid oklch(0.535 0.215 25 / 0.2);
+    border: 1px solid oklch(0.55 0.17 250 / 0.2);
     transition: all 0.3s ease;
     position: relative;
   }
   .jr-card:hover {
-    border-color: oklch(0.535 0.215 25 / 0.7);
-    box-shadow: 0 0 30px oklch(0.535 0.215 25 / 0.15);
+    border-color: oklch(0.55 0.17 250 / 0.7);
+    box-shadow: 0 0 30px oklch(0.55 0.17 250 / 0.15);
     transform: translateY(-2px);
   }
   .jr-card:hover::before {
