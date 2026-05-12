@@ -523,6 +523,7 @@ const diferenciais = [
   { title: "15 anos de especialização", desc: "Conhecimento acumulado em décadas de serviço no segmento industrial.", Icon: Wrench },
   { title: "Grande São Paulo", desc: "Cobertura completa da Grande SP. Interior sob acordo.", Icon: MapIcon },
   { title: "Especialistas em frios e vácuo", desc: "Os maquinários mais críticos e complexos são nossa principal especialidade.", Icon: Snowflake },
+  { title: "Especialistas em serra fita", desc: "Manutenção, afiação e ajustes de equipamentos de serra fita com precisão e segurança.", Icon: Wrench },
   { title: "Atendimento a qualquer segmento", desc: "Açougues, mercados, padarias, restaurantes, indústrias — atendemos toda a cadeia.", Icon: Handshake },
 ];
 
