@@ -73,7 +73,7 @@ function Header() {
           </div>
         </div>
         <a
-          href="https://wa.me/5511940817698?utm_source=chatgpt.com"
+          href="https://wa.me//5511940817698"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Falar no WhatsApp"
@@ -83,7 +83,7 @@ function Header() {
           WhatsApp
         </a>
         <a
-          href="https://wa.me/5511940817698?utm_source=chatgpt.com"
+          href="https://wa.me//5511940817698"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Falar no WhatsApp"
@@ -100,7 +100,7 @@ function Header() {
 function FloatingWhats() {
   return (
     <a
-      href="https://wa.me/5511940817698?utm_source=chatgpt.com"
+      href="https://wa.me//5511940817698"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"
@@ -162,7 +162,7 @@ function Hero() {
         <Reveal delay={360}>
           <div className="mt-7 md:mt-9">
             <a
-              href="https://wa.me/5511940817698?utm_source=chatgpt.com"
+              href="https://wa.me//5511940817698"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-jr-red text-jr-white font-mono-tech text-xs tracking-[0.18em] uppercase px-6 py-4 hover:bg-jr-red-vivid transition-colors active:scale-[0.98] shadow-[0_8px_30px_oklch(0.55_0.17_250/0.4)]"
