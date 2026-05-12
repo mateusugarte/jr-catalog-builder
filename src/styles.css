@@ -49,8 +49,8 @@
   --jr-black: oklch(0.145 0 0);
   --jr-black-medium: oklch(0.18 0 0);
   --jr-black-soft: oklch(0.215 0 0);
-  --jr-red: oklch(0.535 0.215 25);
-  --jr-red-vivid: oklch(0.585 0.225 25);
+  --jr-red: oklch(0.55 0.17 250);
+  --jr-red-vivid: oklch(0.62 0.19 250);
   --jr-white: oklch(0.965 0 0);
   --jr-gray: oklch(0.66 0 0);
   --jr-gray-dark: oklch(0.34 0 0);
