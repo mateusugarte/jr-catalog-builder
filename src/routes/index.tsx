@@ -249,6 +249,7 @@ const servicos = [
   { name: "Liquidificador Industrial", desc: "Conserto de hélices, copos e sistemas de alta rotação.", Icon: Blend },
   { name: "Processador", desc: "Manutenção de engrenagens, motores e lâminas industriais.", Icon: Cog },
   { name: "Balanças", desc: "Calibração, reparo e manutenção de balanças comerciais e industriais.", Icon: Scale },
+  { name: "Serra Fita", desc: "Manutenção, afiação e ajustes de serras fita com precisão e segurança.", Icon: Wrench },
 ];
 
 function Servicos() {
