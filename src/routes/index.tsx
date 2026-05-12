@@ -250,6 +250,7 @@ const servicos = [
   { name: "Processador", desc: "Manutenção de engrenagens, motores e lâminas industriais.", Icon: Cog },
   { name: "Balanças", desc: "Calibração, reparo e manutenção de balanças comerciais e industriais.", Icon: Scale },
   { name: "Serra Fita", desc: "Manutenção, afiação e ajustes de serras fita com precisão e segurança.", Icon: Wrench },
+  { name: "Moedor de Carne", desc: "Reparo de motores, roscas, facas e discos para moagem eficiente.", Icon: Beef },
 ];
 
 function Servicos() {
